@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "TEAMID.de.readux.app", 
+        "appID": "M95V8XV5XB.com.mycompany.readux", 
         "paths": [ "/weiterleitung/*" ]
       }
     ]
