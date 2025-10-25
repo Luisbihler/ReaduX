@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum – ReaduX</title>
+  <meta name="description" content="Impressum für ReaduX." />
+  <link rel="canonical" href="https://readux.de/impressum.html" />
+
+  <!-- Icon -->
+  <link rel="icon" sizes="32x32" href="/512.png" />
+  <link rel="apple-touch-icon" href="/512.png" />
+
+  <!-- Minimal Styles: an deinen Index-Stil angelehnt -->
+  <style>
+    :root{
+      --bg:#0b0c10; --fg:#f7f7f7; --muted:#c9c9c9; --card:#15171c;
+      --radius:20px; --maxw:840px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --fg:#0b0c10; --muted:#52525b; --card:#f7f7f8; }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 50% -10%, rgba(110,231,183,.25), transparent 60%), var(--bg);
+      color:var(--fg); display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    main{width:100%; max-width:var(--maxw)}
+    .card{
+      background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius);
+      padding:28px; box-shadow:0 10px 40px rgba(0,0,0,.25);
+    }
+    h1{margin:0 0 8px; font-size:clamp(28px, 5vw, 40px)}
+    p, li, dd{line-height:1.6}
+    .muted{color:var(--muted)}
+    .grid{display:grid; gap:18px}
+    .block{padding:14px 0; border-top:1px dashed rgba(255,255,255,.14)}
+    .block:first-of-type{border-top:0}
+    dt{font-weight:700; margin-bottom:4px}
+    address{font-style:normal}
+    a{color:inherit; text-underline-offset:3px}
+    .topnav{margin-bottom:16px}
+    .topnav a{font-weight:600}
+    footer{margin-top:18px; color:var(--muted); font-size:13px}
+  </style>
+</head>
+<body>
+  <main aria-labelledby="title">
+    <div class="card">
+      <nav class="topnav">
+        <a href="/">← Zurück zur Startseite</a>
+      </nav>
+
+      <h1 id="title">Impressum</h1>
+      <p class="muted">Angaben gemäß § 5 TMG (Deutschland) / § 25 MedienG (Österreich)</p>
+
+      <div class="grid" role="region" aria-label="Impressumsangaben">
+        <section class="block">
+          <dt>Name des Anbieters</dt>
+          <dd><strong>Luis Bihler Zit City</strong></dd>
+        </section>
+
+        <section class="block">
+          <dt>Adresse</dt>
+          <dd>
+            <address>
+              Buchenweg 20<br />
+              72474 Winterlingen<br />
+              Deutschland
+            </address>
+          </dd>
+        </section>
+
+        <section class="block">
+          <dt>Kontakt</dt>
+          <dd>
+            Telefon: <a href="tel:+491756948588">01756948588</a><br />
+            E-Mail: <a href="mailto:luis.bihler@readux.de">luis.bihler@readux.de</a>
+          </dd>
+        </section>
+
+        <section class="block">
+          <dt>Vertretungsberechtigter</dt>
+          <dd>Luis Bihler</dd>
+        </section>
+
+        <section class="block">
+          <dt>Registereintrag</dt>
+          <dd>Der Anbieter ist nicht im Handelsregister eingetragen.</dd>
+        </section>
+
+        <section class="block">
+          <dt>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG</dt>
+          <dd>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</dd>
+        </section>
+
+        <section class="block">
+          <dt>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</dt>
+          <dd>Luis Bihler, Buchenweg 20, 72474 Winterlingen</dd>
+        </section>
+
+        <section class="block">
+          <dt>Haftungsausschluss</dt>
+          <dd>
+            Die Inhalte unserer App wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+            Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+          </dd>
+        </section>
+
+        <section class="block">
+          <dt>Streitschlichtung</dt>
+          <dd>
+            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+            <a href="https://ec.europa.eu/consumers/odr" rel="noopener" target="_blank">
+              https://ec.europa.eu/consumers/odr
+            </a><br />
+            Unsere E-Mail-Adresse findest du oben im Impressum.
+          </dd>
+        </section>
+      </div>
+
+      <footer>
+        © <span id="year"></span> ReaduX
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
