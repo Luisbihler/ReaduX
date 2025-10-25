@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datenschutzerklärung – ReaduX</title>
+  <meta name="description" content="Datenschutzerklärung für die Landingpage von ReaduX." />
+  <link rel="canonical" href="https://readux.de/datenschutz.html" />
+
+  <!-- Icon -->
+  <link rel="icon" sizes="32x32" href="/512.png" />
+  <link rel="apple-touch-icon" href="/512.png" />
+
+  <!-- Minimal Styles wie auf der Hauptseite -->
+  <style>
+    :root{
+      --bg:#0b0c10; --fg:#f7f7f7; --muted:#c9c9c9; --card:#15171c;
+      --radius:20px; --maxw:840px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --fg:#0b0c10; --muted:#52525b; --card:#f7f7f8; }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 50% -10%, rgba(110,231,183,.25), transparent 60%), var(--bg);
+      color:var(--fg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    main{width:100%; max-width:var(--maxw)}
+    .card{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 10px 40px rgba(0,0,0,.25);
+    }
+    h1{margin:0 0 16px; font-size:clamp(28px, 5vw, 40px)}
+    h2{margin-top:24px; font-size:22px}
+    p{line-height:1.6}
+    a{color:inherit; text-underline-offset:3px}
+    .topnav{margin-bottom:16px}
+    .topnav a{font-weight:600}
+    footer{margin-top:24px; color:var(--muted); font-size:13px}
+  </style>
+</head>
+<body>
+  <main aria-labelledby="title">
+    <div class="card">
+      <nav class="topnav">
+        <a href="/">← Zurück zur Startseite</a>
+      </nav>
+
+      <h1 id="title">Datenschutzerklärung</h1>
+
+      <h2>1. Verantwortlicher</h2>
+      <p>
+        Luis Bihler Zit City<br />
+        Buchenweg 20<br />
+        72474 Winterlingen<br />
+        Deutschland<br /><br />
+        Telefon: <a href="tel:+491756948588">01756948588</a><br />
+        E-Mail: <a href="mailto:luis.bihler@readux.de">luis.bihler@readux.de</a>
+      </p>
+
+      <h2>2. Allgemeine Hinweise</h2>
+      <p>
+        Diese Website dient ausschließlich als Informations- und Weiterleitungsseite zur App „ReaduX“.
+        Personenbezogene Daten werden auf dieser Website nicht erhoben, verarbeitet oder gespeichert.
+      </p>
+
+      <h2>3. Erhebung und Verarbeitung von Daten</h2>
+      <p>
+        Beim Aufruf dieser Website findet keine aktive Datenerhebung durch uns statt.
+        Unser Hosting-Provider verarbeitet lediglich technisch notwendige Verbindungsdaten (z.&nbsp;B. IP-Adresse,
+        Zeitpunkt des Seitenaufrufs, Browsertyp), um die Website auszuliefern.
+        Diese Daten werden nicht ausgewertet oder mit anderen Datenquellen zusammengeführt
+        und nach kurzer Zeit automatisch gelöscht.
+      </p>
+
+      <h2>4. Keine Cookies und keine Analyse-Tools</h2>
+      <p>
+        Diese Website verwendet keine Cookies, kein Tracking und keine Analyse- oder Statistikdienste
+        (z.&nbsp;B. Google&nbsp;Analytics).
+        Ebenso werden keine eingebetteten Inhalte Dritter geladen.
+      </p>
+
+      <h2>5. Links zu externen Angeboten</h2>
+      <p>
+        Diese Website enthält Links zu externen Plattformen, insbesondere zum Apple&nbsp;App&nbsp;Store und zum
+        Google&nbsp;Play&nbsp;Store.
+        Für die Datenverarbeitung beim Aufruf dieser externen Seiten sind ausschließlich deren Betreiber
+        verantwortlich. Es gelten die jeweiligen Datenschutzrichtlinien der Anbieter.
+      </p>
+
+      <h2>6. Rechte der betroffenen Personen</h2>
+      <p>
+        Da auf dieser Website keine personenbezogenen Daten verarbeitet werden,
+        bestehen in der Regel keine Betroffenenrechte im Sinne der DSGVO.
+        Solltest du dennoch Fragen zum Datenschutz haben,
+        kannst du dich jederzeit über die oben angegebenen Kontaktdaten an uns wenden.
+      </p>
+
+      <h2>7. Änderung dieser Datenschutzerklärung</h2>
+      <p>
+        Wir behalten uns vor, diese Datenschutzerklärung anzupassen,
+        falls dies aufgrund technischer Änderungen oder gesetzlicher Vorgaben erforderlich wird.<br />
+        Aktueller Stand: <strong>Oktober 2025</strong>
+      </p>
+
+      <footer>
+        © <span id="year"></span> ReaduX
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
