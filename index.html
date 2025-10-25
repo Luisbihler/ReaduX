@@ -4,99 +4,70 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ReaduX – Jetzt herunterladen</title>
-  <meta name="description" content="Deine App, um Buchwissen festzuhalten, umzusetzen und wirklich zu verinnerlichen." />
+  <meta name="description" content="Deine App, um Buchwissen festzuhalten, umzusetzen und wirklich zu verinnerlichen.">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://readux.de" />
+  <!-- Canonical & Social -->
+  <link rel="canonical" href="https://readux.de">
+  <meta property="og:title" content="ReaduX">
+  <meta property="og:description" content="Deine App, um Buchwissen festzuhalten, umzusetzen und wirklich zu verinnerlichen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://readux.de">
+  <meta property="og:image" content="https://readux.de/social.jpg"><!-- TODO -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ReaduX">
+  <meta name="twitter:description" content="Deine App, um Buchwissen festzuhalten, umzusetzen und wirklich zu verinnerlichen.">
+  <meta name="twitter:image" content="https://readux.de/social.jpg"><!-- TODO -->
 
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="ReaduX" />
-  <meta property="og:description" content="Deine App, um Buchwissen festzuhalten, umzusetzen und wirklich zu verinnerlichen." />
-  <meta property="og:type" content="website" />
-  <!-- TODO: Ersetze durch echte, öffentlich erreichbare URL zu deinem Social-Image (1200x630) -->
-  <meta property="og:image" content="https://readux.de/social.jpg" />
-  <meta property="og:url" content="https://readux.de" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ReaduX" />
-  <meta name="twitter:description" content="Deine App, um Buchwissen festzuhalten, umzusetzen und wirklich zu verinnerlichen." />
-  <!-- TODO: wie oben -->
-  <meta name="twitter:image" content="https://readux.de/social.jpg" />
-
-  <!-- iOS Smart App Banner (Bonus) -->
+  <!-- iOS Smart App Banner -->
   <meta name="apple-itunes-app" content="app-id=6747975596">
 
-  <!-- PWA/Icon -->
-  <link rel="icon" sizes="32x32" href="512.png" />
-  <link rel="apple-touch-icon" href="512.png" />
+  <!-- Icons -->
+  <link rel="icon" sizes="32x32" href="512.png">
+  <link rel="apple-touch-icon" href="512.png">
 
-  <!-- Minimal CSS im Head für schnellen First Paint -->
   <style>
     :root{
-      --bg: #0b0c10;
-      --fg: #f7f7f7;
-      --muted:#c9c9c9;
-      --card:#15171c;
-      --accent:#6ee7b7; /* sanftes Grün */
-      --btn:#ffffff;
-      --btn-fg:#0b0c10;
-      --radius: 20px;
-      --maxw: 840px;
+      --bg:#0b0c10; --fg:#f7f7f7; --muted:#c9c9c9; --card:#f3f4f6;
+      --radius:20px; --maxw:840px;
     }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#ffffff; --fg:#0b0c10; --muted:#52525b; --card:#f7f7f8; --btn:#0b0c10; --btn-fg:#ffffff; }
+    @media (prefers-color-scheme: dark){
+      :root{ --card:#15171c; --muted:#c9c9c9; }
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background:radial-gradient(1200px 600px at 50% -10%, rgba(110,231,183,.25), transparent 60%), var(--bg);
-      color:var(--fg);
-      display:flex; align-items:center; justify-content:center; padding:24px;
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 600px at 50% -10%, rgba(110,231,183,.25), transparent 60%), var(--bg);
+      color:var(--fg); display:flex; align-items:center; justify-content:center; padding:24px;
     }
     .wrap{width:100%; max-width:var(--maxw); text-align:center}
     .card{
-      background:var(--card);
-      backdrop-filter: blur(8px);
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:var(--radius);
-      padding:32px 28px;
-      box-shadow: 0 10px 40px rgba(0,0,0,.25);
+      background:var(--card); border-radius:var(--radius); padding:32px 28px;
+      border:1px solid rgba(255,255,255,.10); box-shadow:0 10px 40px rgba(0,0,0,.25);
     }
     .logo{
-      width:84px; height:84px; border-radius:22%;
-      border:1px solid rgba(255,255,255,.1);
-      box-shadow:0 6px 24px rgba(0,0,0,.25);
-      object-fit:cover;
-      background:#222;
+      width:84px; height:84px; border-radius:22%; object-fit:cover; background:#222;
+      border:1px solid rgba(0,0,0,.1); box-shadow:0 6px 24px rgba(0,0,0,.15);
     }
-    h1{font-size: clamp(28px, 5vw, 40px); margin:16px 0 8px}
-    .tag{color:var(--muted); font-size:clamp(14px, 2.5vw, 18px); margin:0 0 22px}
-    .buttons{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin: 6px 0 6px}
-    /* Badge-Buttons: reine Bildlinks, keine Card-Optik */
-    .btn-badge{
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      min-width: auto;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    h1{font-size:clamp(28px,5vw,40px); margin:16px 0 8px}
+    .tag{color:var(--muted); font-size:clamp(14px,2.5vw,18px); margin:0 0 22px}
+
+    /* Store badges */
+    .badges{display:flex; gap:16px; justify-content:center; align-items:center; flex-wrap:wrap; margin:12px 0 6px}
+    .badge-link{display:inline-flex; line-height:0}
+    .badge-link img{display:block; height:56px; width:auto}
+    @media (max-width:420px){
+      .badge-link img{height:50px}
     }
-    .btn-badge img{
-      display:block;
-      height:auto;
-    }
-    .features{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin:18px 0 0 }
-    .chip{
-      font-size:14px; color:var(--fg); background:transparent; border:1px dashed rgba(255,255,255,.18);
-      padding:8px 12px; border-radius:999px
-    }
-    footer{ margin-top:18px; color:var(--muted); font-size:13px }
-    footer a{ color:inherit; text-underline-offset: 3px }
+
+    .features{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin:18px 0 0}
+    .chip{font-size:14px; color:var(--fg); background:transparent; border:1px dashed rgba(255,255,255,.18);
+      padding:8px 12px; border-radius:999px}
+    footer{margin-top:18px; color:var(--muted); font-size:13px}
+    footer a{color:inherit; text-underline-offset:3px}
   </style>
 
-  <!-- JSON-LD (optional: hilft Suchmaschinen/Store-Links zu verstehen) -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -104,11 +75,11 @@
     "name": "ReaduX",
     "applicationCategory": "ProductivityApplication",
     "operatingSystem": "iOS, Android",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"EUR"},
     "url": "https://readux.de",
     "installUrl": [
       "https://apps.apple.com/us/app/readux-bücher-wissen/id6747975596",
-      "https://PLAYSTORE_URL"  /* TODO: ersetze durch deine echte Google-Play-URL */
+      "https://PLAYSTORE_URL"
     ]
   }
   </script>
@@ -116,31 +87,29 @@
 <body>
   <main class="wrap">
     <div class="card" role="region" aria-labelledby="app-title">
-      <img src="512.png" alt="ReaduX App-Icon" class="logo" width="84" height="84" />
+      <img src="512.png" alt="ReaduX App-Icon" class="logo" width="84" height="84">
       <h1 id="app-title">ReaduX</h1>
       <p class="tag">Deine App, um Buchwissen festzuhalten, umzusetzen und wirklich zu verinnerlichen.</p>
 
-      <div class="buttons">
-        <!-- iOS: offizielles Apple-Badge (SVG) -->
-        <a class="btn-badge"
+      <!-- ✅ Offizielle Store-Badges, korrekt verschachtelt -->
+      <div class="badges">
+        <a class="badge-link"
            href="https://apps.apple.com/us/app/readux-bücher-wissen/id6747975596"
-           rel="noopener noreferrer" target="_blank"
+           target="_blank" rel="noopener noreferrer"
            aria-label="Im App Store herunterladen">
           <img src="Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg"
-               alt="Im App Store laden" width="180" height="60" />
+               alt="Im App Store laden">
         </a>
 
-        <!-- Android: offizielles Google-Play-Badge -->
-        <a class="btn-badge"
-           href="https://PLAYSTORE_URL"  <!-- TODO: ersetze durch deine echte Google-Play-URL -->
-           rel="noopener noreferrer" target="_blank"
+        <a class="badge-link"
+           href="https://PLAYSTORE_URL"  <!-- TODO: echte Google-Play-URL -->
+           target="_blank" rel="noopener noreferrer"
            aria-label="Bei Google Play herunterladen">
           <img src="GetItOnGooglePlay_Badge_Web_color_German.png"
-               alt="Bei Google Play laden" width="200" height="60" />
+               alt="Bei Google Play laden">
         </a>
       </div>
 
-      <!-- kurze Nutzenargumente (optional; kann gelöscht werden) -->
       <div class="features" aria-label="Hauptfunktionen">
         <span class="chip">✨ Schnell startklar</span>
         <span class="chip">🔒 Datenschutz-freundlich</span>
@@ -149,25 +118,23 @@
 
       <footer>
         <div style="margin:12px 0 6px">© <span id="year"></span> ReaduX</div>
-        <!-- TODO: trage hier echte URLs ein oder lege Seiten im Repo an -->
-        <a href="IMPRINT_URL">Impressum</a> · <a href="PRIVACY_URL">Datenschutz</a>
+        <a href="IMPRINT_URL">Impressum</a> · <a href="PRIVACY_URL">Datenschutz</a> <!-- TODO -->
       </footer>
     </div>
   </main>
 
   <script>
-    // Aktuelles Jahr im Footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Optional: Automatische Weiterleitung zum passenden Store (aktivierbar via ?autoRedirect=true)
+    // Optional: Auto-Redirect via ?autoRedirect=true
     (function(){
       const params = new URLSearchParams(window.location.search);
       if(params.get('autoRedirect') === 'true'){
         const ua = navigator.userAgent || navigator.vendor || window.opera;
         const isAndroid = /android/i.test(ua);
         const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-        if(isAndroid) { window.location.href = "https://PLAYSTORE_URL"; } // TODO
-        else if(isIOS) { window.location.href = "https://apps.apple.com/us/app/readux-bücher-wissen/id6747975596"; }
+        if(isAndroid){ window.location.href = "https://PLAYSTORE_URL"; } // TODO
+        else if(isIOS){ window.location.href = "https://apps.apple.com/us/app/readux-bücher-wissen/id6747975596"; }
       }
     })();
   </script>
